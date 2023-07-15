@@ -6,7 +6,15 @@ DotNetEnv.Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddCors();
+builder.Services.AddCors(options =>
+    {
+        options.AddDefaultPolicy(builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+    });
 
 string connectionString = DotNetEnv.Env.GetString("DATABASE_URL");
 
@@ -28,12 +36,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(c =>
-{
-    c.AllowAnyHeader();
-    c.AllowAnyMethod();
-    c.AllowAnyOrigin();
-});
+// app.UseCors(c =>
+// {
+//     c.AllowAnyHeader();
+//     c.AllowAnyMethod();
+//     c.AllowAnyOrigin();
+// });
 
 app.MapMethods(CompanyPost.Template, CompanyPost.Methods, CompanyPost.Handle);
 app.MapMethods(CompanyPut.Template, CompanyPut.Methods, CompanyPut.Handle);
