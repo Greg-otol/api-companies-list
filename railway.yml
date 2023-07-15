@@ -1,0 +1,7 @@
+version: 1
+services:
+  - name: web
+    port: 8080
+    env:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
