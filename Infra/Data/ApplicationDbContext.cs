@@ -17,7 +17,7 @@ public class ApplicationDbContext : DbContext
             .Property(c => c.CNPJ).IsRequired();
         builder.Entity
         <Company>()
-            .Property(u => u.Email).IsRequired();
+            .Property(c => c.Email).IsRequired();
         builder.Entity<Company>()
             .Property(c => c.RazaoSocial).IsRequired();
         builder.Entity<Company>()

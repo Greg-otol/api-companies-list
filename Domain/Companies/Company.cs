@@ -34,7 +34,7 @@ public class Company : Entity
             ResponsavelLegal = responsavelLegal,
             Email = email,
             TelefoneContato = telefoneContato,
-            DataInclusao = DateTime.Now
+            DataInclusao = DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc)
         };
 
         return company;

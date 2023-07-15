@@ -1,11 +1,19 @@
 using api_companies_list.Endpoints.Companies;
 using api_companies_list.Infra.Data;
+using Microsoft.EntityFrameworkCore;
+
+DotNetEnv.Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors();
 
-builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration.GetConnectionString("ConnectionDb"));
+string connectionString = DotNetEnv.Env.GetString("DATABASE_URL");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(connectionString));
+
+// builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration.GetConnectionString("ConnectionDb"));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
