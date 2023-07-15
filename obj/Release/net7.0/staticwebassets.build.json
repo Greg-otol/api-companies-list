@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AjhfCLLxvMxBME15BJbtBVvlFJojmrg0JAfJvrr7BcE=",
+  "Source": "api-companies-list",
+  "BasePath": "_content/api-companies-list",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
