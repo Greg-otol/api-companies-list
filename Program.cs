@@ -26,6 +26,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors();
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
