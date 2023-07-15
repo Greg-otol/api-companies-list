@@ -9,24 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 string connectionString = DotNetEnv.Env.GetString("DATABASE_URL");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
-
-// builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration.GetConnectionString("ConnectionDb"));
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseCors();
 
 builder.Services.AddCors(options =>
 {
@@ -38,12 +24,17 @@ builder.Services.AddCors(options =>
     });
 });
 
-// app.UseCors(c =>
-// {
-//     c.AllowAnyHeader();
-//     c.AllowAnyMethod();
-//     c.AllowAnyOrigin();
-// });
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseCors();
+
+app.UseHttpsRedirection();
 
 app.MapMethods(CompanyPost.Template, CompanyPost.Methods, CompanyPost.Handle);
 app.MapMethods(CompanyPut.Template, CompanyPut.Methods, CompanyPut.Handle);

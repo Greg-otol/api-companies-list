@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj": {}
+    "D:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj": {}
   },
   "projects": {
-    "d:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj": {
+    "D:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj",
+        "projectUniqueName": "D:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj",
         "projectName": "api-companies-list",
-        "projectPath": "d:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj",
+        "projectPath": "D:\\Arquivos\\Desktop\\api-companies-list\\api-companies-list.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "d:\\Arquivos\\Desktop\\api-companies-list\\obj\\",
+        "outputPath": "D:\\Arquivos\\Desktop\\api-companies-list\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,9 +59,9 @@
               "target": "Package",
               "version": "[7.0.9, )"
             },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.4, )"
+              "version": "[7.0.9, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
