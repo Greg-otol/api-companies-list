@@ -12,7 +12,7 @@ Assuming .Net 6 or higher and dotnet ef are installed on the machine, run the co
 
 ### `dotnet run`
 
-### `open local server http://localhost:port`
+### `open local server http://localhost:3000`
 
 ## To access all API functionality, you can access the Swagger documentation at the following link:
 
@@ -21,3 +21,7 @@ Assuming .Net 6 or higher and dotnet ef are installed on the machine, run the co
 ## Screenshot of the Swagger interface:
 
 ![swagger](https://github.com/Greg-otol/api-companies-list/assets/97900313/fbfddade-d306-482b-bd00-048d79054357)
+
+## Contact
+
+<a href="https://www.linkedin.com/in/gregoriogeotol/" target="_blank"> <img src="https://img.icons8.com/fluency/144/000000/linkedin.png"/></a>
